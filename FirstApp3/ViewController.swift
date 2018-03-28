@@ -28,6 +28,12 @@ class ViewController: UIViewController {
 
     @IBAction func doButtonTap(_ sender: UIButton) {
         print("Button Touched")
+        updateUI()
+        lightOn = !lightOn
+    }
+    
+    //Cleaning
+    func updateUI() {
         if lightOn == true{
             self.messageLabel.text = "White"
             self.messageLabel.textColor = UIColor.white
@@ -39,7 +45,7 @@ class ViewController: UIViewController {
             view.backgroundColor = UIColor.white
             self.messageButton.setTitle("On", for: .normal)
         }
-        lightOn = !lightOn
+        
     }
 
 }
